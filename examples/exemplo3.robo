@@ -1,0 +1,49 @@
+/* Exemplo 3 do PDF - Rotina completa:
+   o robo patrulha um corredor, desvia de obstaculos
+   e pega objetos encontrados */
+
+# @mundo 30x15
+# @inicio 2,7
+# @direcao leste
+# @obstaculo 10,7
+# @obstaculo 18,7
+# @objeto 6,7
+# @objeto 14,7
+# @objeto 24,7
+
+func desviar(int angulo) {
+    girar direita angulo graus;
+    mover frente 2 cm;
+    girar esquerda angulo graus;
+    mover frente 3 cm;
+    girar esquerda angulo graus;
+    mover frente 2 cm;
+    girar direita angulo graus;
+}
+
+func patrulhar(int ciclos) {
+    int i = 0;
+    int dist = 0;
+    enquanto (i < ciclos) {
+        ler(dist);
+        se (dist < 2) {
+            imprimir("Obstaculo detectado! Desviando...");
+            desviar(90);
+        } senao {
+            se (dist == 0) {
+                imprimir("Objeto encontrado! Pegando...");
+                pegar;
+                mover tras 1 cm;
+            } senao {
+                mover frente 2 cm;
+            }
+        }
+        i = i + 1;
+    }
+    retorno i;
+}
+
+# Execucao principal
+int resultado = patrulhar(12);
+imprimir("Ciclos completados:", resultado);
+parar;

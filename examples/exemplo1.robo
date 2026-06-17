@@ -1,0 +1,10 @@
+# Exemplo 1 do PDF - Configuracao inicial do robo
+# @mundo 20x10
+# @inicio 5,8
+# @direcao norte
+
+int velocidade = 5;
+texto nome = "Robo01";
+imprimir("Iniciando robo:", nome);
+mover frente 5 cm;
+parar;

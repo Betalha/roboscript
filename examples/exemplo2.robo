@@ -1,0 +1,22 @@
+# Exemplo 2 do PDF - Robo desvia de obstaculos por 5 tentativas
+# @mundo 25x15
+# @inicio 2,12
+# @direcao leste
+# @obstaculo 8,12
+# @obstaculo 15,12
+# @obstaculo 20,8
+
+int tentativas = 5;
+int distancia = 0;
+
+repita tentativas vezes {
+    ler(distancia);
+    se (distancia < 5) {
+        girar direita 90 graus;
+        mover frente 3 cm;
+    } senao {
+        mover frente 4 cm;
+    }
+}
+parar;
+imprimir("Missao concluida.");
