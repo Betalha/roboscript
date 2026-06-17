@@ -202,6 +202,3 @@ $ python3 roboscript.py check examples/invalido2.robo
 python3 -m unittest discover -v tests
 ```
 
-## Autores
-Alberto Perdigao (2210368) / Marcus Vinicius (2320404)
-Implementacao do executor: OpenCode
